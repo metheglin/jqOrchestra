@@ -45,4 +45,3 @@ var hover_pulldown = function($$) {
     init: init
   };
 };
-  hover_pulldown($('.hover-pulldown')).init();
