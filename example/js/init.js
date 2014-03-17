@@ -21,4 +21,6 @@ $(function(){
       }
     }
   ).init();
+
+  $('.social-btns').social_btns({});
 });
