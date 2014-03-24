@@ -17,7 +17,8 @@
         background: '#333',
         opacity: 0
       },
-      opacity_max: 0.85
+      opacity_max: 0.85,
+      fade_mode: 'swing'
     };
     $.extend(true, options, custom_options);
     
@@ -26,11 +27,11 @@
     // Events
     $$.each(function() {
       $(this).mouseenter(function() {
-        $(this).find('.' + options.over_class).fadeTo(100, options.opacity_max);
+        $(this).find('.' + options.over_class).fadeTo(options.fade_mode, options.opacity_max);
         return false;
       });
       $(this).mouseleave(function() {
-        $(this).find('.' + options.over_class).fadeTo(100, 0);
+        $(this).find('.' + options.over_class).fadeTo(options.fade_mode, 0);
         return false;
       });
     });
