@@ -30,8 +30,9 @@ var hover_pulldown = function($$, options) {
         var filename = splitted[0];
         var ext = splitted[1];
         if ( options.is_preload ) {
-          $('<img>').attr('src', filename + '_bk' + '.' + ext);
-          $('<img>').attr('src', filename + '.' + ext);
+          var tmp_img_on = $('<img>').attr('src', filename + '_bk' + '.' + ext).hide();
+          var tmp_img_off = $('<img>').attr('src', filename + '.' + ext).hide();
+          $('body').append(tmp_img_on).append(tmp_img_off);
         }
         
         return {
